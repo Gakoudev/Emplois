@@ -25,7 +25,7 @@ function loadDataOffre() {
 			 html += '</a><ul><li>'+ item.entreprise.nom +'</li>';
 			 html += '<li><i class="fas fa-map-marker-alt"></i>' + item.localisation + '</li>';
 			 html += '<li>' + item.salaire + '</li></ul></div></div>';
-			 html += '<div class="items-link items-link2 f-right"><a href="/SamaJob/offre/details" name="id" value="' + item.id +'">' + item.typeJob + '</a>';
+			 html += '<div class="items-link items-link2 f-right"><a href="http://localhost:8080/SamaJob/offre/details?id=' + item.id + '">' + item.typeJob + '</a>';
 			 html += '<span>limite: '+ item.dateLimite + '</span>';
 			 html += '</div></div>';
 			 });

@@ -1,23 +1,15 @@
 package controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.StringWriter;
-import java.util.Date;
 import java.util.List;
 
 import javax.ejb.EJB;
-import javax.persistence.Column;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import org.json.simple.JSONObject;
 
 import com.google.gson.Gson;
 import com.groupeisi.dao.IAnnonce;
@@ -57,7 +49,6 @@ public class EntrepriseServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		Annonce annonce = new Annonce();
-		Entreprise entreprise = new Entreprise(); 
 		Gson gson = new Gson();
 		String jsonData;
 		String action = request.getServletPath(); 
@@ -77,7 +68,6 @@ public class EntrepriseServlet extends HttpServlet {
 	        }
 	        else {
 	        	if (session.getAttribute("profile").equals("Entreprise")) {
-    				int id;
 	        		switch (action) {
         			case "/entreprise/offres":
         				Domaine domaine = new Domaine();
@@ -104,8 +94,6 @@ public class EntrepriseServlet extends HttpServlet {
 	        	if (session.getAttribute("profile").equals("Entreprise")) {
 	        		Annonce annonce = new Annonce();
 	        		Entreprise entreprise = new Entreprise(); 
-	 				Gson gson = new Gson();
-	 				String jsonData;
 	 				int id;
 		        	String action = request.getServletPath();
 		        	if(action.equals("/entreprise/offres")) {

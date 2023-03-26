@@ -1,10 +1,8 @@
 package controller;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.ejb.EJB;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,8 +14,6 @@ import com.groupeisi.dao.ICompte;
 import com.groupeisi.dao.IDomaine;
 import com.groupeisi.dao.IEntreprise;
 import com.groupeisi.entities.Compte;
-import com.groupeisi.entities.Domaine;
-import com.groupeisi.entities.Entreprise;
 
 
 /**
@@ -65,8 +61,6 @@ public class LoginServlet extends HttpServlet {
 	        session.setAttribute("profile", compte.getDroit().getLibelle());
 	        String servletPath;
 	        if(compte.getDroit().getLibelle().equals("Admin")) {
-	        	Entreprise entreprise = new Entreprise();
-	        	List<Entreprise> entreprises = entreprisedao.list(entreprise);
 			    servletPath = "/SamaJob/admin/entreprise";
 			    response.sendRedirect(servletPath);
 	        }else {

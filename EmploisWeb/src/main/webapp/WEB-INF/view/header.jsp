@@ -57,19 +57,37 @@
                                 <!-- Main-menu -->
                                 <div class="main-menu">
                                     <nav class="d-none d-lg-block">
-                                        <ul id="navigation">
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="job_listing.html">Find a Jobs </a></li>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="#">Page</a>
-                                                <ul class="submenu">
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="single-blog.html">Blog Details</a></li>
-                                                    <li><a href="elements.html">Elements</a></li>
-                                                    <li><a href="job_details.html">job Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                    	<ul id="navigation">
+                                    <%
+									   // Vérifier si l'attribut "profile" existe dans la session
+									   if (session.getAttribute("profile") != null) {
+									      // Récupérer la valeur de l'attribut "profile"
+									      String profile = (String) session.getAttribute("profile");
+									      
+									      // Vérifier si la valeur de l'attribut "profile" est égale à "admin"
+									      if (profile.equals("User")) {
+									    	  %>
+									         
+	                                            <li><a href="http://localhost:8080/SamaJob/liste/offres">Offres d'emplois </a></li>
+	                                            <li><a href="http://localhost:8080/SamaJob/samaCv/editer">Modifier mon CV</a></li>
+	                                            <li><a href="http://localhost:8080/SamaJob/samaCv/pdf">Imprimer mon CV</a></li>
+                                        	 
+									    	  <%
+									      }
+									      else
+									    	  if(profile.equals("Admin")){
+									    		  %>
+		                                            <li><a href="entreprise">Entreprise</a></li>
+		                                            <li><a href="domaine">Domaine</a></li>
+	                                            <%
+									    	  }
+										      else
+										    	  if(profile.equals("Entreprise")){
+										    		  
+										    	  }
+									   }
+									%>
+                                        
                                         </ul>
                                     </nav>
                                 </div>          
