@@ -67,40 +67,21 @@
 					</div>
                     
 	<div class="row col-md-12">
-            <div class="container col-md-7">
-                <div class="card  mb-4">
-                    <div class="card-header">
-                        <h6 class="m-0 font-weight-bold text-primary">Liste des Entreprise</h6>
-                    </div>
-                    <div class="card-body">
-                        <table id="tablesEntreprise">
-                            <thead>
-                                <tr>
-                                    <th>Nom </th>
-                                    <th>Adresse </th>
-                                    <th>Email </th>
-                                    <th>Site Web </th>
-                                    <th>Telephone </th>
-                                    <th>Editer</th>
-                                </tr>
-                            </thead>
-                            <tfoot>
-                                <tr>
-                                    <th>Nom </th>
-                                    <th>Adresse </th>
-                                    <th>Email </th>
-                                    <th>Site Web </th>
-                                    <th>Telephone </th>
-                                    <th>Editer</th>
-                                </tr>
-                            </tfoot>
-                            <tbody class="tEntreprise">
+                     <div class="col-xl-7 col-lg-7 col-md-6">
+                        <!-- Featured_job_start -->
+                        <section class="featured-job-area">
+                            <div class="container  tEntreprise">
+                                <!-- single-job-content -->
                                 
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+                                    
+                                        
+                                        
+                                            
+                                                
+                                            
+             				</div>
+             			</section>
+             		</div>
             
             <div class="container col-md-4"> 
                <div class="card"> 
@@ -121,6 +102,15 @@
 					                   <div class="form-floating mb-3">   
 					                   	<input class="form-control" id="description" type="text" name="description" placeholder="Description " required autofocus/>
 					                   </div>
+					                   
+					                   <div class="form-group">
+					                       <select class="form-control" name="domaine" id="domaine">
+					                        <c:forEach var="domaine" items="${domaines}">
+									
+											  <option  value='<c:out value="${domaine.id}" />'><c:out value="${domaine.nom}" /></option>
+											</c:forEach>
+					                       </select>
+					                   </div>
 					                   <div class="form-floating mb-3">   
 					                   	<input class="form-control" id="adresse" type="text" name="adresse" placeholder="Adresse " required autofocus/>
 					                   </div>
@@ -136,27 +126,18 @@
 					                   
 					                   <!-- Students -->
 					                   
-					                   <div class="form-group">
-					                       <select class="form-control" name="domaine" id="domaine">
-					                        <c:forEach var="domaine" items="${domaines}">
-									
-											  <option  value='<c:out value="${domaine.id}" />'><c:out value="${domaine.nom}" /></option>
-											</c:forEach>
-					                       </select>
-					                   </div>
 					                   
 					                   <!-- courses -->
 									
-								
-
+	
                        <!-- Bouton  Ajouter-->
 
                        <div class="flex items-center justify-end mt-4">
                            <input type="submit" class="btn btn-primary" onclick="addEntreprise();" value="Ajouter"/>
                        </div>
+                       
                       
                </div>
            </div>
        </div>
-      
 <jsp:include page="../footer.jsp"></jsp:include>

@@ -7,7 +7,7 @@
 				<div class="row">
 					<div class="col-lg-8 col-md-8">
 						<h3 class="mb-30 text-center">Mettre à jours mon CV</h3>
-						<form action="samaCv/editer" method="post">
+						<form action="editer" method="post">
 							
 							<div class="mt-10">
 								<input type="text" name="telephone" placeholder="${cv.telephone}" 

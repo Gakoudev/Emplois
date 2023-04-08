@@ -188,7 +188,10 @@ public class EmploisServlet extends HttpServlet {
 	    				String specialite = request.getParameter("specialite");
 	    				String experience = request.getParameter("experience");
 	    				String email = session.getAttribute("email").toString();
-	    				CV cv = new CV();
+	    				
+	    				Compte compte2 = new Compte();
+	    				compte2 = comptedao.byEmail(session.getAttribute("email").toString());
+	    				CV cv = cvdao.samaCv(compte2.getId());
 	    				cv.setAdresse(adresse);
 	    				cv.setAge(age);
 	    				cv.setTelephone(telephone);

@@ -67,7 +67,7 @@
 		  </div>
 		</div>
 	
-	<button class="btn head-btn1"  onclick='$("#modalOffre").modal("show")'><i  class="fas fa-fw fa-plus-circle text-primary"></i> </button>
+	<button class="btn head-btn1"  onclick='$("#modalOffre").modal("show")'><i  class="fas fa-fw fa-plus-circle text-primary "></i> </button>
 	
 		<div class="job-listing-area pt-120 pb-120">
                   
@@ -79,7 +79,7 @@
                     <div class="col-xl-9 col-lg-9 col-md-8">
                         <!-- Featured_job_start -->
                         <section class="featured-job-area">
-                            <div class="container  tOffre">
+                            <div class="container tEOffre">
                                 <!-- single-job-content -->
                                 
                                     

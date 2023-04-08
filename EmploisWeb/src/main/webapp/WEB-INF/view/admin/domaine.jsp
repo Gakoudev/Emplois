@@ -26,34 +26,22 @@
 		    </div>
 		  </div>
 		</div>
-	 <div class="row">
-            <div class="container col-md-7">
-                <div class="card  mb-4">
-                    <div class="card-header">
-                        <h6 class="m-0 font-weight-bold text-primary">Liste des Domaines</h6>
-                    </div>
-                    <div class="card-body">
-                        <table id="tablesDomaine">
-                            <thead>
-                                <tr>
-                                    <th>Nom Domaine</th>
-                                    <th>Supprimer</th>
-                                </tr>
-                            </thead>
-                            <tfoot>
-                                <tr>
-                                    <th>Nom Domaine</th>
-                                    <th>Supprimer</th>
-                                </tr>
-                            </tfoot>
-                            <tbody class="tbody">
+	 <div class="row col-md-12">
+                     <div class="col-xl-7 col-lg-7 col-md-6">
+                        <!-- Featured_job_start -->
+                        <section class="featured-job-area">
+                            <div class="container tbody">
+                                <!-- single-job-content -->
                                 
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            
+                                    
+                                        
+                                        
+                                            
+                                                
+                                            
+             				</div>
+             			</section>
+             		</div>       
             <div class="container col-md-5"> 
                <div class="card"> 
                    <div class="card-header">

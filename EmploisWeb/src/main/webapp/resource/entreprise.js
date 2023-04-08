@@ -15,6 +15,18 @@ function loadDataEntreprise() {
 			
 		 var html = '';
 			 $.each(result, function (key, item) {
+				 html += '<div class="single-job-items mb-30">';
+				 html += '<div class="job-items">';
+				 html += '<div class="company-img">';
+				 html += '<a href="#"><img src="../resource/assets/img/icon/entreprise.png"" alt=""></a></div>';
+				 html += '<div class="job-tittle job-tittle2">';
+				 html += '<h4>'+  item.nom + '</h4>';
+				 html += '</a><ul><li>'+ item.telephone +'</li>';
+				 html += '<li>' + item.siteWeb + '</li></ul></div></div>';
+				 html += '<div class="items-link items-link2 f-right"><a data-toggle="modal" data-target="#modalEditEntreprise" data-whatever='+item.id+'><i class=" fas fa-fw fa-pencil-alt"></i></a>';
+				 html += '<span> '+ item.email + '</span>';
+			 	 html += '</div></div>';
+			 /*
 			 html += '<tr>';
 			 html += '<td>' + item.nom + '</td>';
 			 html += '<td>' + item.adresse + '</td>';
@@ -23,6 +35,7 @@ function loadDataEntreprise() {
 			 html += '<td>' + item.telephone + '</td>';
 			 html += '<td><button class="btn btn-primary" data-toggle="modal" data-target="#modalEditEntreprise" data-whatever='+item.id+'><i class="fas fa-fw  fa-pen "></i></button> ';
 			 html += '</tr>';
+			 */
 			 });
 			 $('.tEntreprise').html(html);
 			 },

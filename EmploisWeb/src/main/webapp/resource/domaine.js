@@ -15,10 +15,23 @@ function loadDataDomaine() {
 			
 		 var html = '';
 			 $.each(result, function (key, item) {
+				 
+				 html += '<div class="single-job-items mb-30">';
+				 html += '<div class="job-items">';
+				 html += '<div class="company-img">';
+				 html += '<a ><img src="../resource/assets/img/icon/domaine.png"" alt=""></a></div>';
+				 html += '<div class="job-tittle job-tittle2">';
+				 html += '<h4>'+  item.nom + '</h4>';
+				 html += '</a><ul><li></li>';
+				 html += '<li></li></ul></div></div>';
+				 html += '<div class="items-link items-link2 f-right"><a data-toggle="modal" data-target="#modaldeleteDomaine" data-whatever='+item.id+'><i class=" fas fa-fw fa-trash"></i></a>';
+			 	 html += '</div></div>';
+			 	/*  
 			 html += '<tr>';
 			 html += '<td>' + item.nom + '</td>';
 			 html += '<td><button class="btn btn-primary" data-toggle="modal" data-target="#modaldeleteDomaine" data-whatever='+item.id+'><i class="fas fa-fw  fa-trash "></i></button> ';
 			 html += '</tr>';
+			*/
 			 });
 			 $('.tbody').html(html);
 			 },

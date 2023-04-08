@@ -2,6 +2,13 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 </main>
+							
+<br/>
+<br/>							
+<br/>
+<br/>
+<br/>
+<br/>
     <footer class="footer-area footer-bg  ">
         
         <!-- footer-bottom area -->
