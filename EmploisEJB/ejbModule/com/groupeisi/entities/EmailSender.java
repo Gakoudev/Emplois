@@ -15,8 +15,8 @@ public class EmailSender  implements Serializable {
 	
 	private static final long serialVersionUID = 1L; 
 	public static void sendEmail(String to, String subject, String body) throws MessagingException {
-        String username = "gakoudev@gmail.com";
-        String password = "vqmubccxjkascaih";
+        String username = "myemail@gmail.com";
+        String password = "mypassword";
 
         // Configurez les propriétés pour l'envoi de l'e-mail
         Properties props = new Properties();
